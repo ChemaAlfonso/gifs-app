@@ -1,0 +1,1 @@
+export const newRandNumber = () => new Date().getTime().toString() + Math.random() * 999999;

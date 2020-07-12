@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 2rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  color: transparent;
+  font-size: 2.5rem;
+  -webkit-text-stroke: rgb(70, 143, 226);
+  -webkit-text-stroke-width: 2px ;
+}
+
+h3 {
+  padding: 1rem;
+}
+
+.addField {
+  padding: .3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.grid-imgs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media SCREEN AND ( min-width: 576px ) {
+  .grid-imgs-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media SCREEN AND ( min-width: 768px ) {
+  .grid-imgs-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+.grid-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  grid-column: span 1;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, .6);
+}
+
+.grid-img-wrapper img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
